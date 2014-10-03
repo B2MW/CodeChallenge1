@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "webViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *valueOne;
+@property (strong, nonatomic) IBOutlet UITextField *valueTwo;
+@property (strong, nonatomic) IBOutlet UINavigationItem *navBarTitle;
+@property (strong, nonatomic) IBOutlet UIButton *navBarButton;
+
+@property int finalValue;
 
 @end
 
@@ -16,12 +23,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setNavButtonState];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)performCalculation:(id)sender {
+    self.finalValue= self.valueOne.text.intValue * self.valueTwo.text.intValue;
+    self.navBarTitle.title = [NSString stringWithFormat:@"%i",self.finalValue];
+    [self.valueOne resignFirstResponder];
+    [self.valueTwo resignFirstResponder];
+
+    [self setNavButtonState];
+    NSLog(@"%d", self.navBarButton.enabled);
+}
+
+- (void) setNavButtonState {
+    if ((self.finalValue %5 == 0) && (self.finalValue != 0)) {
+        self.navBarButton.enabled = YES;
+    } else self.navBarButton.enabled = NO;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    webViewController *nextPage = [segue destinationViewController];
+    nextPage.title = self.navBarTitle.title;
+//    [segue destinationViewController];
 }
 
 @end

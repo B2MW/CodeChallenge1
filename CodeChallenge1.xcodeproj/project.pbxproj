@@ -14,6 +14,7 @@
 		4C10583B19DDD6F400DB04A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C10583A19DDD6F400DB04A4 /* Images.xcassets */; };
 		4C10583E19DDD6F400DB04A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C10583C19DDD6F400DB04A4 /* LaunchScreen.xib */; };
 		4C10584A19DDD6F400DB04A4 /* CodeChallenge1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C10584919DDD6F400DB04A4 /* CodeChallenge1Tests.m */; };
+		4C10585519DDE0E000DB04A4 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C10585419DDE0E000DB04A4 /* webViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		4C10584319DDD6F400DB04A4 /* CodeChallenge1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C10584819DDD6F400DB04A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C10584919DDD6F400DB04A4 /* CodeChallenge1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeChallenge1Tests.m; sourceTree = "<group>"; };
+		4C10585319DDE0E000DB04A4 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = webViewController.h; path = ../webViewController.h; sourceTree = "<group>"; };
+		4C10585419DDE0E000DB04A4 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = webViewController.m; path = ../webViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 		4C10582C19DDD6F400DB04A4 /* CodeChallenge1 */ = {
 			isa = PBXGroup;
 			children = (
+				4C10585319DDE0E000DB04A4 /* webViewController.h */,
+				4C10585419DDE0E000DB04A4 /* webViewController.m */,
 				4C10583119DDD6F400DB04A4 /* AppDelegate.h */,
 				4C10583219DDD6F400DB04A4 /* AppDelegate.m */,
 				4C10583419DDD6F400DB04A4 /* ViewController.h */,
@@ -222,6 +227,7 @@
 				4C10583619DDD6F400DB04A4 /* ViewController.m in Sources */,
 				4C10583319DDD6F400DB04A4 /* AppDelegate.m in Sources */,
 				4C10583019DDD6F400DB04A4 /* main.m in Sources */,
+				4C10585519DDE0E000DB04A4 /* webViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
